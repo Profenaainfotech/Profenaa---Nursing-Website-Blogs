@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Nursing and Health Science College in Pollachi - Profenaa College</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --success-color: #27ae60;
+            --gold-color: #f39c12;
+            --purple-color: #9b59b6;
+            --text-dark: #2c3e50;
+            --text-light: #ecf0f1;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            background: var(--gradient-1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            animation: slideInFromTop 1s ease-out;
+            text-shadow: 0 0 30px rgba(255,255,255,0.5);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+        }
+
+        .glow-button {
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            background: white;
+            color: var(--primary-color);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(255,255,255,0.5);
+            animation: pulse 2s infinite;
+        }
+
+        .glow-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(255,255,255,0.7);
+        }
+
+        /* Floating shapes background */
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+        }
+
+        .shape {
+            position: absolute;
+            background: rgba(255,255,255,0.1);
+            animation: float 15s infinite ease-in-out;
+        }
+
+        .shape:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            left: 10%;
+            animation-delay: 0s;
+            border-radius: 50%;
+        }
+
+        .shape:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            right: 20%;
+            animation-delay: 2s;
+            transform: rotate(45deg);
+        }
+
+        .shape:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            left: 50%;
+            animation-delay: 4s;
+            border-radius: 50%;
+        }
+
+        /* Why Choose Section */
+        .why-section {
+            padding: 80px 20px;
+            background: white;
+            position: relative;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .why-title {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 3rem;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 3rem;
+        }
+
+        .why-card {
+            padding: 30px;
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            border-radius: 20px;
+            box-shadow: 20px 20px 60px #d1d1d1, -20px -20px 60px #ffffff;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .why-card.animate-in {
+            animation: slideUpFadeIn 0.6s ease forwards;
+        }
+
+        .why-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .why-card::before {
+            content: "✓";
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-3);
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* Course Details Section */
+        .course-details {
+            padding: 80px 20px;
+            background: var(--gradient-3);
+            clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+        }
+
+        .course-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            color: white;
+        }
+
+        .course-title {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .course-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 3rem;
+        }
+
+        .highlight-item {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        .highlight-item.animate-in {
+            animation: scaleIn 0.5s ease forwards;
+        }
+
+        .highlight-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255,255,255,0.3);
+        }
+
+        /* Programs Section */
+        .programs-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .programs-title {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .programs-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-4);
+            border-radius: 2px;
+        }
+
+        .program-card {
+            background: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.5s ease;
+        }
+
+        .program-card.animate-in {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .program-card:nth-child(odd) {
+            border-left-color: var(--secondary-color);
+            background: linear-gradient(to right, rgba(52, 152, 219, 0.05), white);
+        }
+
+        .program-card:nth-child(even) {
+            border-left-color: var(--success-color);
+            background: linear-gradient(to right, rgba(39, 174, 96, 0.05), white);
+        }
+
+        .program-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .program-title {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .program-details {
+            color: #666;
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .detail-tag {
+            background: linear-gradient(to right, #f0f0f0, #e0e0e0);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Events Section */
+        .events-section {
+            padding: 80px 20px;
+            background: var(--gradient-4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .events-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            color: white;
+        }
+
+        .events-title {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .events-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .event-bubble {
+            width: 150px;
+            height: 150px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        .event-bubble.animate-in {
+            animation: bubbleIn 0.6s ease forwards;
+        }
+
+        .event-bubble:hover {
+            transform: scale(1.1);
+            background: rgba(255,255,255,0.3);
+            box-shadow: 0 0 30px rgba(255,255,255,0.5);
+        }
+
+        /* Career Section */
+        .career-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .career-title {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 3rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .career-list {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .career-item {
+            background: linear-gradient(145deg, #f0f0f0, #ffffff);
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+            padding-left: 50px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+        .career-item.animate-in {
+            animation: slideUpFadeIn 0.5s ease forwards;
+        }
+
+        .career-item::before {
+            content: "→";
+            position: absolute;
+            left: 20px;
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            animation: arrow-move 2s infinite;
+        }
+
+        .career-item:hover {
+            background: var(--gradient-3);
+            color: white;
+            transform: translateX(10px);
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: relative;
+        }
+
+        .benefits-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .benefits-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 2rem;
+            text-shadow: 0 0 20px rgba(255,255,255,0.5);
+        }
+
+        .benefits-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        .benefits-text.animate-in {
+            animation: scaleIn 0.8s ease forwards;
+        }
+
+        /* Role Section */
+        .role-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .role-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .role-title {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .role-description {
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            padding: 40px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: rotateX(-15deg);
+        }
+
+        .role-description.animate-in {
+            animation: flipIn 0.8s ease forwards;
+        }
+
+        .role-description::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.5), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        /* Admissions Section */
+        .admissions-section {
+            padding: 80px 20px;
+            background: var(--gradient-2);
+            color: white;
+            text-align: center;
+        }
+
+        .admissions-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .admissions-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 2rem;
+            animation: pulse 2s infinite;
+        }
+
+        .admissions-info {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
+            margin: 20px 0;
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        .admissions-info.animate-in {
+            animation: scaleIn 0.6s ease forwards;
+        }
+
+        .admission-item {
+            margin: 15px 0;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .admission-item::before {
+            content: "📍";
+            font-size: 1.5rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 60px 20px;
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .contact-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .contact-info {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .contact-info.animate-in {
+            animation: slideUpFadeIn 0.6s ease forwards;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            color: var(--gold-color);
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--gold-color);
+        }
+
+        /* Animations */
+        @keyframes slideInFromTop {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            33% {
+                transform: translateY(-30px) rotate(120deg);
+            }
+            66% {
+                transform: translateY(30px) rotate(240deg);
+            }
+        }
+
+        @keyframes slideUpFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bubbleIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes arrow-move {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(10px);
+            }
+        }
+
+        @keyframes flipIn {
+            to {
+                opacity: 1;
+                transform: rotateX(0);
+            }
+        }
+
+        @keyframes shine {
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            }
+            100% {
+                transform: translateX(200%) translateY(200%) rotate(45deg);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .course-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .programs-section {
+                padding: 60px 15px;
+            }
+
+            .program-card {
+                padding: 20px;
+            }
+
+            .career-list {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .event-bubble {
+                width: 120px;
+                height: 120px;
+                font-size: 0.9rem;
+            }
+
+            .events-grid {
+                gap: 15px;
+            }
+
+            .admissions-info {
+                padding: 25px;
+            }
+
+            .admission-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            .hero-section {
+                min-height: 80vh;
+            }
+
+            .section-container {
+                padding: 0 15px;
+            }
+
+            .why-card {
+                padding: 20px;
+            }
+
+            .glow-button {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+
+            .program-details {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .benefits-text {
+                font-size: 1rem;
+            }
+
+            .role-description {
+                padding: 25px;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-1);
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gradient-2);
+        }
+
+        /* Loader */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader-circle {
+            width: 80px;
+            height: 80px;
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid var(--secondary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-circle"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Best Nursing and Health Science College in Pollachi</h1>
+            <p class="hero-subtitle">Online & Offline Courses Available</p>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">
+                Are you passionate about building a career in healthcare and looking for a professional
+                course with flexible learning options? Join the Best Nursing and Health Science College
+                in Pollachi — Profenaa College of Nursing & Health Science — offering both online and
+                offline programs designed to suit your schedule and career goals.
+            </p>
+            <p style="margin-bottom: 2rem; opacity: 0.9;">
+                Our college provides industry-recognized nursing and health science training, combining
+                in-depth theory with hands-on clinical practice to help you become a confident and
+                certified healthcare professional.
+            </p>
+            <button class="glow-button" onclick="scrollToAdmissions()">Apply Now</button>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-section">
+        <div class="section-container">
+            <h2 class="why-title animate-element">Why Choose Profenaa – The Best Nursing and Health Science College in Pollachi?</h2>
+            <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
+                We are one of the most trusted Nursing and Health Science Colleges in Pollachi and across
+                Tamil Nadu, known for quality education, experienced faculty, and excellent student support.
+            </p>
+            <div class="why-grid">
+                <div class="why-card animate-element">Government-recognized certifications</div>
+                <div class="why-card animate-element">Online & Offline classes available</div>
+                <div class="why-card animate-element">Experienced and certified trainers</div>
+                <div class="why-card animate-element">Practical clinical training with modern equipment</div>
+                <div class="why-card animate-element">Affordable fees with flexible payment options</div>
+                <div class="why-card animate-element">100% placement guidance</div>
+                <div class="why-card animate-element">Hands-on clinical training with global certifications</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Details Section -->
+    <section class="course-details">
+        <div class="course-content">
+            <h2 class="course-title animate-element">Nursing & Health Science Course Details</h2>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">
+                Our programs at Profenaa College in Pollachi are designed to meet modern healthcare
+                industry standards, preparing students for high-demand roles across hospitals, clinics, and
+                healthcare centers.
+            </p>
+            <h3 style="font-size: 1.5rem; margin-bottom: 2rem;">Course Highlights:</h3>
+            <div class="course-highlights">
+                <div class="highlight-item animate-element">Nursing philosophy and patient care methodology</div>
+                <div class="highlight-item animate-element">Clinical laboratory diagnostics and pathology</div>
+                <div class="highlight-item animate-element">Radiological imaging and X-ray technology</div>
+                <div class="highlight-item animate-element">Emergency care and pre-hospital management</div>
+                <div class="highlight-item animate-element">Physiotherapy and rehabilitation techniques</div>
+                <div class="highlight-item animate-element">General healthcare and maternity assistance</div>
+                <div class="highlight-item animate-element">Dental procedures and clinic management</div>
+                <div class="highlight-item animate-element">Operation theatre protocols and sterilization</div>
+                <div class="highlight-item animate-element">Advanced laboratory techniques and diagnostics</div>
+                <div class="highlight-item animate-element">Healthcare ethics and social development</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs-section">
+        <div class="section-container">
+            <h2 class="programs-title animate-element">Our Programs – Best Health Science Courses in Pollachi</h2>
+            <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 3rem;">
+                Profenaa College offers 8 specialized programs tailored to meet the growing demand for
+                skilled healthcare professionals:
+            </p>
+            
+            <div class="program-card animate-element">
+                <div class="program-title">1. Best Diploma in Medical Laboratory Technology in Pollachi</div>
+                <p>Comprehensive training in laboratory diagnostics and clinical pathology using modern lab equipment.</p>
+                <div class="program-details">
+                    <span class="detail-tag">Duration: 2 Years</span>
+                    <span class="detail-tag">Eligibility: 10th / +12 / Any Degree</span>
+                </div>
+            </div>
+
+            <div class="program-card animate-element">
+                <div class="program-title">2. Best Diploma in X-Ray Technology in Pollachi</div>
+                <p>Expert training in radiological imaging and patient care techniques with certified instructors.</p>
+                <div class="program-details">
+                    <span class="detail-tag">Duration: 2 Years</span>
+                    <span class="detail-tag">Eligibility: 10th / +12 / Any Degree</span>
+                </div>
+            </div>
+
+            <div class="program-card animate-element">
+                <div class="program-title">3. Best Emergency Patient Care Technician Course in Pollachi</div>
+                <p>Specialized training in emergency response, acute patient care management, and pre-hospital care.</p>
+                <div class="program-details">
+                    <span class="detail-tag">Duration: 2 Years</span>
+                    <span class="detail-tag">Eligibility: 10th / +12 / Any Degree</span>
+                </div>
+            </div>
+
+            <div class="program-card animate-element">
+                <div class="program-title">4. Best Physiotherapy Technician Course in Pollachi</div>
+                <p>Professional training in therapeutic techniques, rehabilitation care, and patient mobility programs.</p>
+                <div class="program-details">
+                    <span class="detail-tag">Duration: 2 Years</span>
+                    <span class="detail-tag">Eligibility: 10th / +12 / Any Degree</span>
+                </div>
+            </div>
+
+            <div class="program-card animate-element">
+                <div class="program-title">5. Best Diploma in General Healthcare & Maternity Assistant in Pollachi</div>
+                <p>Comprehensive training in general healthcare and maternity assistance, focusing on patient care and support.</p>
+                <div class="program-details">
+                    <span class="detail-tag">Duration: 2 Years</span>
+                    <span class="detail-tag">Eligibility: 10th / +12 / Any Degree</span>
+                </div>
+            </div>
+
+            <div class="program-card animate-element">
+                <div class="program-title">6. Best Diploma in Dental Assistant Course in Pollachi</div>
+                <p>Training in dental procedures, patient support, and clinic management.</p>
+                <div class="program-details">
+                    <span class="detail-tag">Duration: 2 Years</span>
+                    <span class="detail-tag">Eligibility: 10th / +12 / Any Degree</span>
+                </div>
+            </div>
+
+            <div class="program-card animate-element">
+                <div class="program-title">7. Best Advance Diploma in Clinical Laboratory Technology in Pollachi</div>
+                <p>Advanced laboratory techniques, diagnostics, and equipment handling for aspiring senior lab professionals.</p>
+                <div class="program-details">
+                    <span class="detail-tag">Duration: 2 Years</span>
+                    <span class="detail-tag">Eligibility: 10th / +12 / Any Degree</span>
+                </div>
+            </div>
+
+            <div class="program-card animate-element">
+                <div class="program-title">8. Best Diploma in Operation Theatre Technology in Pollachi</div>
+                <p>Specialized education in operating theatre protocols, sterilization, and surgical equipment handling.</p>
+                <div class="program-details">
+                    <span class="detail-tag">Duration: 2 Years</span>
+                    <span class="detail-tag">Eligibility: 10th / +12 / Any Degree</span>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(to right, #f8f9fa, white); padding: 40px; margin-top: 40px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <h3 style="color: var(--primary-color); margin-bottom: 20px;">Course Duration & Mode</h3>
+                <p><strong>Course Duration:</strong> 2 Years</p>
+                <p style="margin-top: 15px;"><strong>Course Mode:</strong></p>
+                <ul style="list-style: none; padding: 0; margin-top: 10px;">
+                    <li style="margin: 10px 0;">• <strong>Online Classes</strong> – Learn from home with live & recorded sessions</li>
+                    <li style="margin: 10px 0;">• <strong>Offline Classes</strong> – Classroom-based training at our Pollachi center</li>
+                    <li style="margin: 10px 0;">• <strong>Hybrid (Online + Offline)</strong> – Flexible combination to suit your lifestyle</li>
+                </ul>
+                <p style="margin-top: 20px;"><strong>Eligibility:</strong> Minimum qualification: 10th / +2 / Any Degree<br>
+                Suitable for homemakers, fresh graduates, and working professionals</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events-section">
+        <div class="events-container">
+            <h2 class="events-title animate-element">Events & Activities</h2>
+            <div class="events-grid">
+                <div class="event-bubble animate-element">Interview Preparation Sessions</div>
+                <div class="event-bubble animate-element">Sports Day</div>
+                <div class="event-bubble animate-element">Annual Day Celebrations</div>
+                <div class="event-bubble animate-element">Clinical Exposure Visits</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Section -->
+    <section class="career-section">
+        <div class="section-container">
+            <h2 class="career-title animate-element">Career Opportunities After Completing Health Science Courses in Pollachi</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: #666;">
+                After completing your program at the Best Nursing and Health Science College in Pollachi, you can work as:
+            </p>
+            <div class="career-list">
+                <div class="career-item animate-element">Medical Laboratory Technician</div>
+                <div class="career-item animate-element">Radiographer / X-Ray Technologist</div>
+                <div class="career-item animate-element">Emergency Care Technician</div>
+                <div class="career-item animate-element">Physiotherapy Technician</div>
+                <div class="career-item animate-element">Maternity & General Healthcare Assistant</div>
+                <div class="career-item animate-element">Dental Assistant</div>
+                <div class="career-item animate-element">Clinical Laboratory Specialist</div>
+                <div class="career-item animate-element">Operation Theatre Technician</div>
+                <div class="career-item animate-element">Start your own healthcare clinic or diagnostic center</div>
+            </div>
+            <p style="text-align: center; margin-top: 3rem; font-size: 1.1rem; color: var(--success-color); font-weight: bold;">
+                Certified health science graduates are in high demand in Pollachi, Coimbatore, Tamil Nadu, and across India.
+            </p>
+
+            <div style="background: linear-gradient(to right, #f8f9fa, white); padding: 40px; margin-top: 40px; border-radius: 15px;">
+                <h3 style="color: var(--primary-color); margin-bottom: 20px;">Why Health Science Education Is the Right Career Choice</h3>
+                <p style="line-height: 1.8; color: #555;">
+                    Healthcare is one of the fastest-growing sectors in India, with an ever-increasing demand
+                    for skilled professionals. Health science education focuses on patient-centered care, clinical
+                    competence, and practical skills. With the growing number of hospitals, diagnostic centers,
+                    and clinics, trained health science graduates have excellent and stable career opportunities.
+                </p>
+                <p style="margin-top: 15px; line-height: 1.8; color: #555;">
+                    Choosing the Best Nursing and Health Science College in Pollachi with online and offline
+                    course options ensures flexibility, practical exposure, and long-term career success.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="benefits-content">
+            <h2 class="benefits-title animate-element">The Benefits of Becoming a Health Science Professional</h2>
+            <p class="benefits-text animate-element">
+                Working as a health science professional is extremely fulfilling — you play a direct role in
+                improving and saving lives. It is not difficult to find work; the demand for qualified
+                healthcare technicians is consistently outpacing the supply. Certified graduates from
+                Profenaa College in Pollachi typically command higher salaries compared to non-certified
+                professionals in the same field.
+            </p>
+        </div>
+    </section>
+
+    <!-- Role Section -->
+    <section class="role-section">
+        <div class="role-content">
+            <h2 class="role-title animate-element">What Is the Role of a Healthcare Technician?</h2>
+            <div class="role-description animate-element">
+                <p style="line-height: 1.8;">
+                    Healthcare technicians trained at Profenaa College in Pollachi are equipped to deliver high-quality technical support across multiple healthcare settings. They assist doctors and
+                    clinical staff in diagnostics, surgeries, emergency care, and rehabilitation. They operate,
+                    maintain, and calibrate advanced medical equipment and ensure a safe, sterile, and
+                    efficient environment for all patients. They also maintain accurate clinical records and
+                    contribute to the overall quality of patient care.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section class="admissions-section" id="admissions">
+        <div class="admissions-content">
+            <h2 class="admissions-title">Admissions Open – Enroll Today!</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem;">
+                Looking for the Best Nursing and Health Science College near you in Pollachi?
+            </p>
+            <p style="font-size: 1.5rem; font-weight: bold; margin-bottom: 3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                Admissions are now open for the upcoming batch — Limited Seats Available for 2026 Intake!
+            </p>
+            <div class="admissions-info animate-element">
+                <div class="admission-item">Call / WhatsApp: +91 95000 27638</div>
+                <div class="admission-item">Offline classes available at our Pollachi center</div>
+                <div class="admission-item">Online classes available across Tamil Nadu & India</div>
+                <div class="admission-item">Scholarship Opportunities Available</div>
+                <div class="admission-item">Internship Opportunities Available</div>
+            </div>
+            <p style="margin-top: 2rem; font-size: 1.1rem;">
+                Contact us today to get details about course fees, syllabus, class timings, and placement assistance.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-content">
+            <div class="contact-info animate-element">
+                <h3>Visit Our Website</h3>
+                <p><a href="http://www.profenaanursingcollege.com" target="_blank">www.profenaanursingcollege.com</a></p>
+            </div>
+            <div class="contact-info animate-element">
+                <h3>Address</h3>
+                <p>#37, Rajarajeshwari Nagar-2, Near Resident Welfare Association, Opposite to
+                Nalam Hospital, T. Kottampatty, Mahalakshmi Nagar, Pollachi, Tamil Nadu 642002.</p>
+            </div>
+            <div class="contact-info animate-element">
+                <h3>Email</h3>
+                <p><a href="mailto:contact@profenaanursingcollege.com">contact@profenaanursingcollege.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Page Loader
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loader').classList.add('hidden');
+            }, 1000);
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    
+                    // Stagger animation for multiple elements
+                    const siblings = entry.target.parentElement.querySelectorAll('.animate-element');
+                    siblings.forEach((sibling, index) => {
+                        if (sibling.classList.contains('animate-element')) {
+                            setTimeout(() => {
+                                sibling.classList.add('animate-in');
+                            }, index * 100);
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animate-element class
+        document.querySelectorAll('.animate-element').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Smooth scroll to admissions section
+        function scrollToAdmissions() {
+            document.getElementById('admissions').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroContent = document.querySelector('.hero-content');
+            const shapes = document.querySelectorAll('.shape');
+            
+            if (heroContent) {
+                heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+            
+            shapes.forEach((shape, index) => {
+                const speed = 0.5 + (index * 0.2);
+                shape.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.2}deg)`;
+            });
+        });
+
+        // Add dynamic shine effect on mouse move
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.why-card, .program-card, .highlight-item');
+            const x = e.clientX;
+            const y = e.clientY;
+
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const cardX = rect.left + rect.width / 2;
+                const cardY = rect.top + rect.height / 2;
+                
+                const distance = Math.sqrt(Math.pow(x - cardX, 2) + Math.pow(y - cardY, 2));
+                
+                if (distance < 200) {
+                    const intensity = 1 - (distance / 200);
+                    card.style.boxShadow = `0 0 ${30 * intensity}px rgba(52, 152, 219, ${0.3 * intensity})`;
+                }
+            });
+        });
+
+        // Add typing effect to hero title
+        const heroTitle = document.querySelector('.hero-title');
+        if (heroTitle) {
+            const text = heroTitle.textContent;
+            heroTitle.textContent = '';
+            let i = 0;
+            
+            function typeWriter() {
+                if (i < text.length) {
+                    heroTitle.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            }
+            
+            setTimeout(typeWriter, 500);
+        }
+
+        // Add counter animation for statistics (if needed in future)
+        function animateValue(element, start, end, duration) {
+            const range = end - start;
+            const increment = end > start ? 1 : -1;
+            const stepTime = Math.abs(Math.floor(duration / range));
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                element.textContent = current;
+                if (current === end) {
+                    clearInterval(timer);
+                }
+            }, stepTime);
+        }
+
+        // Responsive navigation (can be enhanced with a mobile menu)
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Add scroll direction detection for future navigation implementation
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down
+                document.body.classList.add('scroll-down');
+                document.body.classList.remove('scroll-up');
+            } else {
+                // Scrolling up
+                document.body.classList.add('scroll-up');
+                document.body.classList.remove('scroll-down');
+            }
+            
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+
+        // Performance optimization - Debounce scroll events
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Apply debounce to scroll events
+        const debouncedScroll = debounce(() => {
+            // Add any scroll-based functionality here
+        }, 100);
+
+        window.addEventListener('scroll', debouncedScroll);
+
+        // Add touch support for mobile devices
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', function(event) {
+            touchStartX = event.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', function(event) {
+            touchEndX = event.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                // Swiped left
+                console.log('Swiped left');
+            }
+            if (touchEndX > touchStartX + 50) {
+                // Swiped right
+                console.log('Swiped right');
+            }
+        }
+    </script>
+</body>
+</html>
